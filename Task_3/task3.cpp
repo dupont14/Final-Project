@@ -16,7 +16,7 @@ using namespace exploringBB;
 #define CLIENTID    "Beagle3"
 #define TOPIC       "Dupont14/feeds/cpe-522-final-project.sliderinput"
 #define AUTHMETHOD  "Dupont14"
-#define AUTHTOKEN   "aio_cYid93RzNcpl8FBfWXEDm4ejZRr7"
+#define AUTHTOKEN   ""
 #define QOS         1
 #define TIMEOUT     10000L
 #define THRESHOLD   30

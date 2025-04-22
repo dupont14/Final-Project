@@ -12,7 +12,7 @@ using namespace std;
 #define CLIENTID   "Beagle1"
 #define TOPIC      "Dupont14/feeds/cpe-522-final-project.temperaturesensor"
 #define AUTHMETHOD "Dupont14"
-#define AUTHTOKEN  "aio_cYid93RzNcpl8FBfWXEDm4ejZRr7"
+#define AUTHTOKEN  ""
 #define QOS        1
 #define TIMEOUT    10000L
 

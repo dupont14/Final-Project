@@ -12,7 +12,7 @@ using namespace exploringBB;
 #define CLIENTID   "Beagle4"
 #define TOPIC      "Dupont14/feeds/cpe-522-final-project.windowopen"
 #define AUTHMETHOD "Dupont14"
-#define AUTHTOKEN  "aio_cYid93RzNcpl8FBfWXEDm4ejZRr7"
+#define AUTHTOKEN  ""
 #define QOS        1
 #define TIMEOUT    10000L
 #define ADC_PATH   "/sys/bus/iio/devices/iio:device0/in_voltage"

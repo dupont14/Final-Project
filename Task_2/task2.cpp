@@ -12,7 +12,7 @@ using namespace exploringBB;
 #define CLIENTID    "Beagle2"
 #define TOPIC       "Dupont14/feeds/cpe-522-final-project.temperaturesensor"
 #define AUTHMETHOD  "Dupont14"
-#define AUTHTOKEN   "aio_cYid93RzNcpl8FBfWXEDm4ejZRr7"
+#define AUTHTOKEN   ""
 #define QOS         1
 #define TIMEOUT     10000L
 #define LED_GPIO    "/sys/class/gpio/gpio60/"
