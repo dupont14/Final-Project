@@ -3,14 +3,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "MQTTClient.h"
-#include "/home/debian/Final_Project/Headers/GPIO.h"
+#include "/home/debian/Final_Project/Headers/derek_LED.h"
 using namespace std;
-using namespace exploringBB;
+
 
 #define ADDRESS     "tcp://io.adafruit.com:1883"
 #define CLIENTID    "Beagle5"
-#define TOPIC       "Dupont14/feeds/cpe-522-final-project.buttongpio"
+#define TOPIC       "Dupont14/feeds/cpe-522-final-project.onboardledkeypad"
 #define AUTHMETHOD  "Dupont14"
 #define AUTHTOKEN   "aio_cYid93RzNcpl8FBfWXEDm4ejZRr7"
 #define QOS         1
@@ -27,9 +28,8 @@ void delivered(void *context, MQTTClient_deliveryToken dt) {
 }
 
 int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message) {
-    int i;
-    GPIO led(2);
-    led.setDirection(OUTPUT);
+
+    LED led(0);
     char* payloadptr;
     printf("Message arrived\n");
     printf("     topic: %s\n", topicName);
@@ -38,14 +38,13 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
     int  buttonVal;
     buttonVal = atoi(payloadptr);
 
-    printf("The value of the button is:%d\n", buttonVal);
-    if(buttonVal == 1)
+    printf("The value of the key pad is:%d\n", buttonVal);
+    for(int i = 0; i < buttonVal; i++)
 	{
-	led.setValue(HIGH);
-	}
-    else
-	{
-	led.setValue(LOW);
+	led.turnOn();
+	sleep(1);
+	led.turnOff();
+	sleep(1);
 	}
     MQTTClient_freeMessage(&message);
     MQTTClient_free(topicName);
