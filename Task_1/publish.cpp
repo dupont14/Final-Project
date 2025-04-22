@@ -10,7 +10,7 @@ using namespace std;
 #define CLIENTID   "Beagle1"
 #define TOPIC      "Dupont14/feeds/cpe-522-final-project.temperaturesensor"
 #define AUTHMETHOD "Dupont14"
-#define AUTHTOKEN  "feb8ea6179c64b638b35b93ef87d4b42"
+#define AUTHTOKEN  ""
 #define QOS        1
 #define TIMEOUT    10000L
 #define ADC_PATH   "/sys/bus/iio/devices/iio:device0/in_voltage"
